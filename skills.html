@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Skills</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <ul class="navbar">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="activity.html">Activity</a></li>
+  </ul>
+</nav>
+
+<section class="page">
+  <h2>Skills</h2>
+
+  <div class="project-card" onclick="toggleProject(this)">
+
+  <h3>Programming & Software</h3>
+
+  <p class="short-text">
+    Experience in Java, C++, and Python for building structured programs...
+  </p>
+
+  <p class="full-text">
+    I have experience in programming using Java, C++, and Python. 
+    These skills are implemented through subjects like Algorithm Programming 
+    and Object-Oriented Programming, where I learned how to build structured 
+    and logical programs. I also used these languages in my projects to solve 
+    different types of problems.
+  </p>
+
+</div>
+
+<div class="project-card">
+
+  <h3>AI & Data</h3>
+
+  <p class="short-text">
+    Knowledge in Machine Learning, AI, Data Mining, and NLP...
+  </p>
+
+  <p class="full-text">
+    I have skills in Machine Learning, Artificial Intelligence, Data Mining, 
+    and Natural Language Processing. These are implemented from subjects like 
+    Machine Learning and Data Mining, and I applied them in projects such as 
+    sentiment analysis, misinformation detection, and text classification.
+  </p>
+
+</div>
+
+<div class="project-card">
+
+  <h3>Computer Vision</h3>
+
+  <p class="short-text">
+    Experience in image processing and computer vision projects...
+  </p>
+
+  <p class="full-text">
+    I have experience in Computer Vision and image processing. These skills 
+    are implemented from Computer Vision and Multimedia Systems, and I used 
+    them in projects like pose estimation and sign language recognition.
+  </p>
+
+</div>
+
+<div class="project-card">
+
+  <h3>Core Computer Science</h3>
+
+  <p class="short-text">
+    Strong understanding of data structures and algorithms...
+  </p>
+
+  <p class="full-text">
+    I understand core concepts like Data Structures and Algorithm Design & Analysis. 
+    These are implemented from subjects like Data Structures and Algorithm Design Analysis, 
+    which helped me improve my logic, efficiency, and problem-solving skills.
+  </p>
+
+</div>
+
+<div class="project-card">
+
+  <h3>Systems & Networks</h3>
+
+  <p class="short-text">
+    Basic knowledge of operating systems, networks, and cloud...
+  </p>
+
+  <p class="full-text">
+    I have basic knowledge of Operating Systems, Computer Networks, and Cloud Infrastructure. 
+    These skills are implemented from related subjects, helping me understand how systems 
+    and networks work in real environments.
+  </p>
+
+</div>
+
+<div class="project-card">
+
+  <h3>Web & Database</h3>
+
+  <p class="short-text">
+    Experience building web apps using Laravel, HTML, and CSS...
+  </p>
+
+  <p class="full-text">
+    I have experience in web development using HTML, CSS, and Laravel, 
+    as well as working with databases. These skills are implemented from 
+    Web Programming and Database Technology, and I used them to build 
+    simple and interactive web applications.
+  </p>
+
+</div>
+
+<div class="project-card">
+
+  <h3>Human Computer Interaction</h3>
+
+  <p class="short-text">
+    Understanding of simple and user-friendly interface design...
+  </p>
+
+  <p class="full-text">
+    I understand the basics of designing user-friendly interfaces. 
+    These skills are implemented from Human and Computer Interaction, 
+    helping me create simple and easy-to-use designs in my projects.
+  </p>
+
+</div>
+
+  <div class="card">
+    <h3>AI & Data</h3>
+    <p>Machine Learning, DeepSeek, Gemma</p>
+  </div>
+
+</section>
+<script>
+document.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", function(e) {
+    if (this.href && this.href.includes(".html")) {
+      e.preventDefault();
+
+      document.body.classList.add("fade-out");
+
+      setTimeout(() => {
+        window.location = this.href;
+      }, 300);
+    }
+  });
+});
+</script>
+</body>
+</html>

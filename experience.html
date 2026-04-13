@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Experience</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <ul class="navbar">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="activity.html">Activity</a></li>
+  </ul>
+</nav>
+
+
+
+
+<section class="page">
+  <h2>Experience</h2>
+
+  <div class="project-card" onclick="toggleProject(this)">
+
+   <div class="project-images">
+    <img src="les1.jpeg" class="project-img">
+    <img src="les2.jpeg" class="project-img extra-img img2">
+    <img src="les3.jpeg" class="project-img extra-img img3">
+    <div class="more-img">+2</div>
+    
+  </div>
+
+  <h3>Private Tutor – William Private Tutor</h3>
+
+  <p class="short-text">
+    Provided tutoring for students across different academic levels...
+  </p>
+
+  <p class="full-text">
+    Provided private tutoring for elementary, middle school, and high school students. 
+  Assisted students in understanding school materials, completing assignments, 
+  and improving their learning confidence.
+  </p>
+
+  <p class="full-text">
+  Developed strong communication, patience, and interpersonal skills while 
+  working with students of different academic levels.
+  </p>
+
+</div>
+
+
+
+<div class="project-card">
+
+  <div class="project-images">
+    <img src="alibaba.jpeg" class="project-img">
+  </div>
+
+  <h3>Alibaba Cloud Certified Associate – Cloud Engineer</h3>
+
+  <p class="short-text">
+    Earned cloud certification from Alibaba Cloud...
+  </p>
+
+  <p class="full-text">
+    Earned the Alibaba Cloud Certified Associate (ACA) – Cloud Engineer certification. 
+    This certification proves my understanding of cloud computing concepts, 
+    including cloud services, infrastructure, and deployment.
+  </p>
+
+  <p class="full-text">
+    Issued: May 2025  
+
+  </p>
+
+    <p class="full-text">
+    Expires: May 2027  
+  </p>
+
+    <p class="full-text">
+
+    Credential ID: IACA13250500210435L
+  </p>
+
+
+</div>
+
+
+</section>
+<script>
+document.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", function(e) {
+    if (this.href && this.href.includes(".html")) {
+      e.preventDefault();
+
+      document.body.classList.add("fade-out");
+
+      setTimeout(() => {
+        window.location = this.href;
+      }, 300);
+    }
+  });
+});
+</script>
+</body>
+</html>

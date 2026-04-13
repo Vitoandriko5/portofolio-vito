@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Projects</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <ul class="navbar">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="activity.html">Activity</a></li>
+  </ul>
+</nav>
+
+<section class="page">
+  <h2>Projects</h2>
+
+  <div class="project-card" onclick="toggleProject(this)">
+
+  <div class="project-images">
+  <img src="gemma.jpeg" class="project-img">
+  <img src="deepseek.jpeg" class="project-img extra-img">
+  <div class="more-img">+1</div>
+</div>
+
+  <h3>Multi-LLM Consensus for Misinformation Detection (Gemma & DeepSeek)</h3>
+
+  <p class="short-text">
+    Conducted a comparative analysis of large language models...
+  </p>
+
+  <p class="full-text">
+    Conducted a comparative analysis of large language models (Gemma and DeepSeek) 
+    to detect misinformation in textual data. Designed structured prompts to 
+    evaluate linguistic and factual inconsistencies in news statements. 
+    Compared model responses to analyze reasoning patterns, classification consistency, 
+    and reliability in identifying potentially misleading or false information.
+  </p>
+
+</div>
+
+
+<div class="project-card" onclick="toggleProject(this)">
+
+  <div class="project-images">
+    <img src="roberta.jpeg" class="project-img">
+    <img src="distillbert.jpeg" class="project-img extra-img img2">
+    <img src="paper.jpeg" class="project-img extra-img img3">
+    <div class="more-img">+2</div>
+  </div>
+
+  <h3>Amazon Review Sentiment Analysis using DistilBERT and RoBERTa</h3>
+
+<p class="short-text">
+  This project implements a five-class sentiment analysis system...
+</p>
+
+<p class="full-text">
+  This project implements a five-class sentiment analysis system using the Amazon Reviews dataset. 
+  Unlike traditional binary sentiment classification, this system classifies reviews into five categories: 
+  Very Negative, Negative, Mixed, Positive, and Very Positive to capture more nuanced customer opinions.
+</p>
+
+<p class="full-text">
+  The project applies transformer-based NLP models including DistilBERT and RoBERTa for text classification. 
+  The dataset was preprocessed through noise filtering, label conversion, tokenization, and data balancing 
+  before training. Model performance was evaluated using accuracy and macro F1-score to compare the 
+  effectiveness of the transformer architectures.
+</p>
+
+<p class="full-text">
+  GitHub: 
+  <a href="https://github.com/Vitoandriko5/amazon-sentiment-analysis-transformers" target="_blank" class="github-link">
+    View Repository 
+  </a>
+</p>
+
+</div>
+
+
+
+
+<div class="project-card" onclick="toggleProject(this)">
+
+  <div class="project-images">
+    <img src="pose 1.jpeg" class="project-img">
+    <img src="pose 2.png" class="project-img img2">
+    <div class="more-img">+1</div>
+  </div>
+
+  <h3>Human Pose Estimation for Fitness Analysis</h3>
+
+  <p class="short-text">
+    AI system for analyzing exercise posture using pose estimation...
+  </p>
+
+  <p class="full-text">
+    Developed a computer vision-based system for analyzing exercise posture using human pose estimation techniques. 
+    The system detects key body joints in real time to evaluate body movement during workouts.
+  </p>
+
+  <p class="full-text">
+    By identifying incorrect posture, the system helps users improve exercise form and reduce the risk of injury. 
+    This project demonstrates the application of deep learning and computer vision in fitness and health-related scenarios.
+  </p>
+
+</div>
+
+
+<div class="project-card" onclick="toggleProject(this)">
+
+  <div class="project-images">
+    <img src="bali1.jpeg" class="project-img">
+    <img src="bali2.jpeg" class="project-img img2">
+    <div class="more-img">+1</div>
+  </div>
+
+  <h3>Explore Bali – Tourism Web Application</h3>
+
+<p class="short-text">
+  Explore Bali is a tourism web application...
+</p>
+
+<p class="full-text">
+  Explore Bali is a tourism web application that helps users discover 
+  destinations in Bali through interactive maps, images, and multimedia content. 
+  The project was developed using Next.js, React, and Tailwind CSS to 
+  create a modern and user-friendly web experience.
+</p>
+
+<p class="full-text">
+  Live Demo: 
+  <a href="https://explorebali.vercel.app" target="_blank" class="github-link">
+    View Website 
+  </a>
+</p>
+
+<p class="full-text">
+  GitHub: 
+  <a href="https://github.com/Vitoandriko5/explore-bali" target="_blank" class="github-link">
+    View Repository 
+  </a>
+</p>
+
+</div>
+
+
+
+<div class="project-card" onclick="toggleProject(this)">
+
+  <div class="project-images">
+    <img src="sign-language1.jpeg" class="project-img">
+    <img src="sign-language2.jpeg" class="project-img img2">
+    <div class="more-img">+1</div>
+  </div>
+
+  <h3>Sign Language Recognition using CNN-LSTM</h3>
+
+  <p class="short-text">
+    Deep learning system for recognizing sign language gestures from video...
+  </p>
+
+  <p class="full-text">
+    Developed a deep learning based sign language recognition 
+    system using a CNN LSTM architecture to classify hand gestures 
+    from video sequences. The model uses MobileNetV2 to extract visual 
+    features from individual frames and an LSTM network to learn temporal 
+    motion patterns across video frames.
+  </p>
+
+  <p class="full-text">
+  The system was trained on a dataset containing 3200 
+  video samples across 64 sign language classes. Data preprocessing 
+  included frame extraction, resizing, normalization, and data augmentation 
+  techniques such as flipping, brightness adjustment, and rotation.
+</p>
+
+<p class="full-text">
+  The final model achieved approximately 89.7% test accuracy, 
+  demonstrating the effectiveness of combining CNN feature extraction 
+  with temporal sequence modeling for video-based gesture recognition.
+</p>
+
+<p class="full-text">
+  GitHub:
+  <a href="https://github.com/Vitoandriko5/explore-bali" target="_blank" class="github-link">
+    View Repository 
+  </a>
+</p>
+
+</div>
+
+
+<script>
+function toggleProject(card) {
+  card.classList.toggle("active");
+}
+</script>
+
+<script>
+document.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", function(e) {
+    if (this.href && this.href.includes(".html")) {
+      e.preventDefault();
+
+      document.body.classList.add("fade-out");
+
+      setTimeout(() => {
+        window.location = this.href;
+      }, 300);
+    }
+  });
+});
+</script>
+
+</body>
+</html>
