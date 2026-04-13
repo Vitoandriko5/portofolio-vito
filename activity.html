@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Activity</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <ul class="navbar">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="activity.html">Activity</a></li>
+  </ul>
+</nav>
+
+<section class="page">
+  <h2>Activity
+  </h2>
+
+  <div class="project-card" onclick="toggleProject(this)">
+
+  <div class="project-images">
+    <img src="activity.jpeg" class="project-img">
+  </div>
+
+  <h3>Teaching Assistant – Classroom Learning Session</h3>
+
+<p class="short-text">
+  Had the opportunity to assist...
+</p>
+
+<p class="full-text">
+  Had the opportunity to assist in a classroom learning session at Athalia School BSD.
+  During the session, I helped guide students through learning activities and interacted 
+  with them in a friendly and supportive way. Creating a comfortable and positive 
+  atmosphere helped students stay engaged and enjoy the learning process.
+  This experience strengthened my communication, teamwork, and mentoring 
+  skills while working with younger students.
+</p>
+
+</div>
+
+
+<div class="project-card" onclick="toggleProject(this)">
+
+  <div class="project-images">
+    <img src="signlingo.jpeg" class="project-img">
+  </div>
+
+  <h3>Human Pose Estimation for Fitness Analysis</h3>
+
+  <p class="short-text">
+    Excited to showcase our project, SignLingo...
+  </p>
+
+  <p class="full-text">
+    Excited to showcase our project, SignLingo, during a technology exhibition.
+    SignLingo is an AI-powered sign language learning platform designed to help 
+    users learn sign language through interactive lessons, quizzes, and gesture recognition.
+    During the exhibition, we demonstrated how the system works and explained how 
+    AI can be used to recognize hand gestures and support accessible learning.
+    It was a great experience presenting the project and discussing the technology 
+    behind it with visitors.
+  </p>
+
+</div>
+
+
+</section>
+<script>
+document.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", function(e) {
+    if (this.href && this.href.includes(".html")) {
+      e.preventDefault();
+
+      document.body.classList.add("fade-out");
+
+      setTimeout(() => {
+        window.location = this.href;
+      }, 300);
+    }
+  });
+});
+</script>
+</body>
+</html>
