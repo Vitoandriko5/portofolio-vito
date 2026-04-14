@@ -45,7 +45,13 @@ nav {
   align-items: center;
   justify-content: center;
   z-index: 9999;
+  transition: all 0.3s ease;
 }
+
+nav.shrink {
+  height: 55px;
+}
+
 
 .navbar {
   display: flex;
@@ -593,4 +599,15 @@ body.fade-out .page {
     transform: scale(4);
     opacity: 0;
   }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
 }

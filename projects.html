@@ -245,5 +245,33 @@ function animate() {
 
 animate();
 </script>
+
+<script>
+window.addEventListener("scroll", () => {
+  const nav = document.querySelector("nav");
+
+  if (window.scrollY > 50) {
+    nav.classList.add("shrink");
+  } else {
+    nav.classList.remove("shrink");
+  }
+});
+</script>
+
+<script>
+const reveals = document.querySelectorAll(".reveal");
+
+window.addEventListener("scroll", () => {
+  reveals.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (top < windowHeight - 100) {
+      el.classList.add("active");
+    }
+  });
+});
+</script>
+
 </body>
 </html>
