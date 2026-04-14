@@ -13,6 +13,15 @@
 <body>
 
 
+
+<div id="mobile-popup" class="popup">
+  <div class="popup-content">
+    <p>For the best experience, please open this website on a laptop or desktop.</p>
+    <button onclick="closePopup()">Got it</button>
+  </div>
+</div>
+
+
 <nav>
   <ul class="navbar">
     <li><a href="index.html" class="nav-link">Home</a></li>
@@ -153,22 +162,50 @@ function animate() {
 animate();
 </script>
 
+
+
+
+
+
+
+<!-- <script>
+function closePopup() {
+  document.getElementById("mobile-popup").style.display = "none";
+}
+
+// cek kalau HP
+window.addEventListener("load", () => {
+  if (screen.width <= 768) {
+    document.getElementById("mobile-popup").style.display = "flex";
+  }
+});
+</script> -->
+
+
 <script>
-const reveals = document.querySelectorAll(".reveal");
+function closePopup() {
+  const popup = document.getElementById("mobile-popup");
+  popup.classList.remove("show");
 
-window.addEventListener("scroll", () => {
-  reveals.forEach(el => {
-    const top = el.getBoundingClientRect().top;
-    const windowHeight = window.innerHeight;
+  setTimeout(() => {
+    popup.style.display = "none";
+  }, 400);
+}
 
-    if (top < windowHeight - 100) {
-      el.classList.add("active");
-    }
-  });
+window.addEventListener("load", () => {
+  if (screen.width <= 768) {
+    const popup = document.getElementById("mobile-popup");
+    popup.style.display = "flex";
+
+    setTimeout(() => {
+      popup.classList.add("show");
+    }, 10);
+  }
 });
 </script>
 
 
 
 </body>
+
 </html>
