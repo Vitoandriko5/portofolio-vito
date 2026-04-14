@@ -757,7 +757,7 @@ body.fade-out .page {
 }
 
 
-.popup {
+/* .popup {
   position: fixed;
   top: 0;
   left: 0;
@@ -786,15 +786,9 @@ body.fade-out .page {
   padding: 10px 20px;
   border-radius: 8px;
   cursor: pointer;
-}
+} */
 
 
-
-
-
-
-
-/* POPUP BACKGROUND */
 .popup {
   display: none;
   position: fixed;
@@ -815,13 +809,11 @@ body.fade-out .page {
   transition: opacity 0.4s ease;
 }
 
-/* saat aktif */
 .popup.show {
   display: flex;
   opacity: 1;
 }
 
-/* BOX */
 .popup-content {
   background: white;
   padding: 25px 30px;
@@ -834,13 +826,11 @@ body.fade-out .page {
   transition: all 0.4s ease;
 }
 
-/* animasi masuk */
 .popup.show .popup-content {
   transform: scale(1);
   opacity: 1;
 }
 
-/* BUTTON */
 .popup-content button {
   margin-top: 15px;
   padding: 8px 16px;
@@ -854,3 +844,72 @@ body.fade-out .page {
 .popup-content button:hover {
   background: #ea580c;
 }
+
+.popup-content p {
+  max-width: 230px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+
+/* POPUP BACKGROUND */
+/* .popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(6px);
+
+  justify-content: center;
+  align-items: center;
+
+  z-index: 99999;
+
+  opacity: 0;
+  transition: opacity 0.4s ease;
+} */
+
+/* saat aktif */
+/* .popup.show {
+  display: flex;
+  opacity: 1;
+} */
+
+/* BOX */
+/* .popup-content {
+  background: white;
+  padding: 25px 30px;
+  border-radius: 12px;
+  text-align: center;
+
+  transform: scale(0.8);
+  opacity: 0;
+
+  transition: all 0.4s ease;
+} */
+
+/* animasi masuk */
+/* .popup.show .popup-content {
+  transform: scale(1);
+  opacity: 1;
+} */
+
+/* BUTTON */
+/* .popup-content button {
+  margin-top: 15px;
+  padding: 8px 16px;
+  border: none;
+  background: #f97316;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+} */
+
+/* .popup-content button:hover {
+  background: #ea580c;
+} */
+

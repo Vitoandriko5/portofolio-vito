@@ -210,17 +210,6 @@ window.addEventListener("load", () => {
 // }
 
 
-function closePopup() {
-  const popup = document.getElementById("mobile-popup");
-  popup.classList.remove("show");
-
-  setTimeout(() => {
-    popup.style.display = "none";
-    startTyping(); // 🔥 INI PENTING
-  }, 400);
-}
-
-
 // function closePopup() {
 //   const popup = document.getElementById("mobile-popup");
 //   popup.classList.remove("show");
@@ -234,15 +223,16 @@ function closePopup() {
 
 function closePopup() {
   const popup = document.getElementById("mobile-popup");
+
   popup.classList.remove("show");
 
-  // 🔥 SIMPAN STATUS
+  // 🔥 INI WAJIB ADA
   localStorage.setItem("seenPopup", "true");
 
   setTimeout(() => {
-    popup.style.display = "none";
-    startTyping();
-  }, 400);
+  popup.style.display = "none";
+  startTyping(); // 🔥 TAMBAH INI
+}, 400);
 }
 
 
@@ -260,21 +250,57 @@ function closePopup() {
 //   }
 // });
 
-window.addEventListener("load", () => {
+// window.addEventListener("load", () => {
+//   const popup = document.getElementById("mobile-popup");
+
+//   const seen = localStorage.getItem("seenPopup");
+
+//   if (window.innerWidth <= 768 && !seen) {
+//     popup.style.display = "flex";
+
+//     setTimeout(() => {
+//       popup.classList.add("show");
+//     }, 10);
+//   }
+// });
+
+
+
+// window.addEventListener("load", () => {
+//   const popup = document.getElementById("mobile-popup");
+//   const seen = localStorage.getItem("seenPopup");
+
+//   if (window.innerWidth <= 768 && !seen) {
+//     popup.style.display = "flex";
+
+//     setTimeout(() => {
+//       popup.classList.add("show");
+//     }, 10);
+//   } else {
+//     startTyping(); // 🔥 INI YANG LO KURANG
+//   }
+// });
+
+
+
+window.addEventListener("DOMContentLoaded", () => {
+  const popup = document.getElementById("mobile-popup");
   const seen = localStorage.getItem("seenPopup");
 
-  if (screen.width <= 768 && !seen) {
-    const popup = document.getElementById("mobile-popup");
+  const isMobile = window.innerWidth <= 768 || navigator.userAgent.includes("Mobile");
+
+  console.log("isMobile:", isMobile);
+
+  if (isMobile && !seen) {
     popup.style.display = "flex";
 
     setTimeout(() => {
       popup.classList.add("show");
-    }, 10);
+    }, 50);
   } else {
     startTyping();
   }
 });
-
 
 </script>
 
