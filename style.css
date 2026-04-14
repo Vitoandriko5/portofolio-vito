@@ -658,3 +658,28 @@ body.fade-out .page {
     transform: rotate(360deg);
   }
 }
+
+@media (max-width: 768px) {
+  .project-card::after {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+
+  /* matiin animasi foto */
+  .hero-img {
+    animation: none;
+  }
+
+  /* shadow diperingan */
+  .project-card {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  }
+
+  /* hover jangan terlalu berat */
+  .project-card:hover {
+    transform: translateY(-3px) scale(1.01);
+  }
+
+}
