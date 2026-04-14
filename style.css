@@ -683,3 +683,50 @@ body.fade-out .page {
   }
 
 }
+
+
+
+
+
+
+/* =========================
+   MOBILE OPTIMIZATION
+========================= */
+@media (max-width: 768px) {
+
+  /* matiin glow */
+  .project-card::after {
+    display: none;
+  }
+
+  /* matiin hover berat */
+  .project-card {
+    transition: none !important;
+    transform: none !important;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  }
+
+  .project-card:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+
+  /* gambar lebih ringan */
+  .project-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  /* matiin animasi foto */
+  .hero-img {
+    animation: none;
+    box-shadow: 0 0 20px rgba(249,115,22,0.5);
+  }
+
+  /* matiin custom cursor */
+  .cursor {
+    display: none;
+  }
+
+}
