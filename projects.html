@@ -196,11 +196,28 @@
 </div>
 
 
+
+
+
 <script>
 function toggleProject(card) {
+  const allCards = document.querySelectorAll(".project-card");
+
+  allCards.forEach(c => {
+    if (c !== card) {
+      c.classList.remove("active");
+    }
+  });
+
   card.classList.toggle("active");
 }
 </script>
+
+
+
+
+
+
 
 <script>
 document.querySelectorAll("a").forEach(link => {
