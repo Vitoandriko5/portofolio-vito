@@ -226,8 +226,7 @@ function closePopup() {
 
   popup.classList.remove("show");
 
-  // 🔥 INI WAJIB ADA
-  localStorage.setItem("seenPopup", "true");
+  sessionStorage.setItem("seenPopup", "true");
 
   setTimeout(() => {
   popup.style.display = "none";
@@ -283,13 +282,116 @@ function closePopup() {
 
 
 
+
+//   const isReload = performance.navigation.type === 1;
+
+//   // reset kalau refresh
+//   if (isReload) {
+//     sessionStorage.removeItem("seenPopup");
+//   }
+
+//   const seen = sessionStorage.getItem("seenPopup");
+
+//   const isMobile = window.innerWidth <= 768;
+
+//   if (isMobile && !seen) {
+//     popup.style.display = "flex";
+
+//     setTimeout(() => {
+//       popup.classList.add("show");
+//     }, 50);
+//   } else {
+//     startTyping();
+//   }
+// });
+
+
+
+  // const seen = sessionStorage.getItem("seenPopup");
+
+
+
+
+// INI YANG BENERRRRRRRRRRRRRR
+
+// window.addEventListener("DOMContentLoaded", () => {
+//   const popup = document.getElementById("mobile-popup");
+// const navType = performance.getEntriesByType("navigation")[0].type;
+// const seen = sessionStorage.getItem("seenPopup");
+
+// // kalau refresh → reset popup
+// if (navType === "reload") {
+//   sessionStorage.removeItem("seenPopup");
+// }
+
+
+//   const isMobile = window.innerWidth <= 768 || navigator.userAgent.includes("Mobile");
+
+//   console.log("isMobile:", isMobile);
+
+//   if (isMobile && !seen) {
+//     popup.style.display = "flex";
+
+//     setTimeout(() => {
+//       popup.classList.add("show");
+//     }, 50);
+//   } else {
+//     startTyping();
+//   }
+
+
+
+// SAMPE SINIIIIIIIII
+
+
+
+// const navType = performance.getEntriesByType("navigation")[0].type;
+
+// // 🔥 1. HAPUS DULU kalau reload
+// if (navType === "reload") {
+//   sessionStorage.removeItem("seenPopup");
+// }
+
+// // 🔥 2. BARU AMBIL
+// const seen = sessionStorage.getItem("seenPopup");
+
+// const isMobile = window.innerWidth <= 768;
+
+// if (isMobile && !seen) {
+//   popup.style.display = "flex";
+
+//   setTimeout(() => {
+//     popup.classList.add("show");
+//   }, 50);
+// } else {
+//   startTyping();
+// }
+
+
 window.addEventListener("DOMContentLoaded", () => {
   const popup = document.getElementById("mobile-popup");
-  const seen = localStorage.getItem("seenPopup");
 
+  // 🔥 detect reload / navigation
+  let navType = "navigate";
+
+  const navEntry = performance.getEntriesByType("navigation")[0];
+  if (navEntry) {
+    navType = navEntry.type;
+  } else if (performance.navigation) {
+    navType = performance.navigation.type === 1 ? "reload" : "navigate";
+  }
+
+  console.log("navType:", navType);
+
+  // 🔥 kalau refresh → reset popup
+  if (navType === "reload") {
+    sessionStorage.removeItem("seenPopup");
+  }
+
+  const seen = sessionStorage.getItem("seenPopup");
+
+  // 🔥 sementara paksa TRUE biar pasti muncul di devtools
   const isMobile = window.innerWidth <= 768 || navigator.userAgent.includes("Mobile");
-
-  console.log("isMobile:", isMobile);
 
   if (isMobile && !seen) {
     popup.style.display = "flex";
