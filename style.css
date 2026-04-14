@@ -101,8 +101,6 @@ nav {
 } */
 
 .hero-img {
-  width: 250px;
-  height: 250px;
   object-fit: cover;
   object-position: 50% 35%;
   border-radius: 50%;
@@ -115,7 +113,16 @@ nav {
     0 0 80px rgba(249, 115, 22, 0.4),
     0 0 120px rgba(249, 115, 22, 0.25);
 
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
+  width: 250px;
+  height: 250px;
+
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
 }
 
 .hero-img:hover {
@@ -164,7 +171,6 @@ nav {
   animation: fadeGlow 1.5s ease, glowPulse 3s infinite alternate;
 }
 
-/* PROFILE (OTHER PAGES IF USED) */
 .profile {
   width: 280px;
   height: 280px;
@@ -180,7 +186,6 @@ nav {
   transform: scale(1.05);
 }
 
-/* PAGE CONTENT */
 .page {
   padding: 80px 120px;
   background: #fff7ed;
@@ -202,7 +207,7 @@ nav {
   box-shadow: 0 10px 25px rgba(0,0,0,0.12);
 }
 
-/* BUTTON */
+
 .btn {
   background-color: #f97316;
   color: white;
@@ -218,7 +223,7 @@ nav {
   transform: translateY(-3px);
 }
 
-/* ANIMATIONS */
+
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -505,4 +510,24 @@ body.fade-out .page {
 @keyframes blink {
   0%, 50%, 100% { opacity: 1; }
   25%, 75% { opacity: 0; }
+}
+
+.navbar a {
+  position: relative;
+  overflow: hidden;
+}
+
+.navbar a span {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple 0.6s linear;
+  background: rgba(255,255,255,0.5);
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
 }
