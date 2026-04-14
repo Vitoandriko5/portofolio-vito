@@ -31,7 +31,7 @@
   <div class="hero-right">
     <h1>
       <span class="intro">Hi, my name is</span><br>
-      <span class="highlight">Natanael Vito Andriko</span>
+      <span class="highlight" id="typing"></span>
     </h1>
 
     <p>
@@ -85,6 +85,19 @@
   </div>
 
 </header>
+<script>
+const text = "Natanael Vito Andriko";
+let i = 0;
 
+function typing() {
+  if (i < text.length) {
+    document.getElementById("typing").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typing, 150);
+  }
+}
+
+typing();
+</script>
 </body>
 </html>
