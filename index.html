@@ -101,15 +101,32 @@
 const text = "Natanael Vito Andriko";
 let i = 0;
 
-function typing() {
-  if (i < text.length) {
-    document.getElementById("typing").innerHTML += text.charAt(i);
-    i++;
-    setTimeout(typing, 150);
+// function typing() {
+//   if (i < text.length) {
+//     document.getElementById("typing").innerHTML += text.charAt(i);
+//     i++;
+//     setTimeout(typing, 150);
+//   }
+// }
+
+// typing();
+
+function startTyping() {
+  const text = "Natanael Vito Andriko";
+  let i = 0;
+
+  function typing() {
+    if (i < text.length) {
+      document.getElementById("typing").innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typing, 150);
+    }
   }
+
+  typing();
 }
 
-typing();
+
 </script>
 
 <script>
@@ -183,25 +200,82 @@ window.addEventListener("load", () => {
 
 
 <script>
+// function closePopup() {
+//   const popup = document.getElementById("mobile-popup");
+//   popup.classList.remove("show");
+
+//   setTimeout(() => {
+//     popup.style.display = "none";
+//   }, 400);
+// }
+
+
 function closePopup() {
   const popup = document.getElementById("mobile-popup");
   popup.classList.remove("show");
 
   setTimeout(() => {
     popup.style.display = "none";
+    startTyping(); // 🔥 INI PENTING
   }, 400);
 }
 
+
+// function closePopup() {
+//   const popup = document.getElementById("mobile-popup");
+//   popup.classList.remove("show");
+
+//   setTimeout(() => {
+//     popup.style.display = "none";
+//     startTyping(); // 🔥 INI PENTING
+//   }, 400);
+// }
+
+
+function closePopup() {
+  const popup = document.getElementById("mobile-popup");
+  popup.classList.remove("show");
+
+  // 🔥 SIMPAN STATUS
+  localStorage.setItem("seenPopup", "true");
+
+  setTimeout(() => {
+    popup.style.display = "none";
+    startTyping();
+  }, 400);
+}
+
+
+
+// window.addEventListener("load", () => {
+//   if (screen.width <= 768) {
+//     const popup = document.getElementById("mobile-popup");
+//     popup.style.display = "flex";
+
+//     setTimeout(() => {
+//       popup.classList.add("show");
+//     }, 10);
+//   } else {
+//     startTyping(); // 🔥 biar desktop langsung jalan
+//   }
+// });
+
 window.addEventListener("load", () => {
-  if (screen.width <= 768) {
+  const seen = localStorage.getItem("seenPopup");
+
+  if (screen.width <= 768 && !seen) {
     const popup = document.getElementById("mobile-popup");
     popup.style.display = "flex";
 
     setTimeout(() => {
       popup.classList.add("show");
     }, 10);
+  } else {
+    startTyping();
   }
 });
+
+
 </script>
 
 
