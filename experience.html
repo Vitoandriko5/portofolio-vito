@@ -7,6 +7,7 @@
 </head>
 <body>
 
+  
 <nav>
   <ul class="navbar">
     <li><a href="index.html">Home</a></li>
@@ -23,7 +24,7 @@
 <section class="page">
   <h2>Experience</h2>
 
-  <div class="project-card" onclick="toggleProject(this)">
+  <div class="project-card ">
 
    <div class="project-images">
     <img src="les1.jpeg" class="project-img">
@@ -148,10 +149,12 @@ window.addEventListener("scroll", () => {
 });
 </script>
 
+
+
 <script>
 const reveals = document.querySelectorAll(".reveal");
 
-window.addEventListener("scroll", () => {
+function revealElements() {
   reveals.forEach(el => {
     const top = el.getBoundingClientRect().top;
     const windowHeight = window.innerHeight;
@@ -160,8 +163,10 @@ window.addEventListener("scroll", () => {
       el.classList.add("active");
     }
   });
-});
+}
+
 </script>
+
 
 </body>
 </html>
