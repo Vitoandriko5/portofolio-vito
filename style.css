@@ -224,7 +224,7 @@ nav {
   margin-top: 20px;
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-  transition: 0.3s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
@@ -296,16 +296,18 @@ nav {
   margin-bottom: 40px;
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-  transition: all 0.9s cubic-bezier(0.22, 1, 0.36, 1);
   cursor: pointer;
+
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.35s ease;
 }
 
-.project-card {
-  position: relative;
-  overflow: hidden;
+.project-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
 
-/* konten card di bawah */
+/* konten */
 .project-card * {
   position: relative;
   z-index: 2;
