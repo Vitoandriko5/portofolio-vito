@@ -761,7 +761,7 @@ body.fade-out .page {
 
   /* matiin animasi foto */
   .hero-img {
-    animation: none;
+    box-shadow: 0 0 20px rgba(249,115,22,0.5)
   }
 
   /* shadow diperingan */
@@ -814,7 +814,8 @@ body.fade-out .page {
 
   /* matiin animasi foto */
   .hero-img {
-    animation: none;
+    animation: float 6s ease-in-out infinite;
+
     box-shadow: 0 0 20px rgba(249,115,22,0.5);
   }
 
@@ -1084,8 +1085,8 @@ body.fade-out .page {
 
   /* 🔥 gambar diperkecil */
   .project-images {
-    width: 110px;     /* 🔥 kecil */
-    height: 85px;
+    width: 100px;     /* 🔥 kecil */
+    height: 75px;
     margin-bottom: 8px;
 
     display: block;
