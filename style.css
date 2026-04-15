@@ -913,3 +913,52 @@ body.fade-out .page {
   background: #ea580c;
 } */
 
+/* =========================
+   HERO MOBILE FIX (WAJIB)
+========================= */
+@media (max-width: 768px) {
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+
+    height: auto;        /* 🔥 penting */
+    margin-top: 100px;   /* biar ga ketutup navbar */
+    padding: 20px;
+  }
+
+  .hero-right {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .hero-img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .hero-right h1 {
+    font-size: 24px;
+  }
+
+  .highlight {
+    font-size: 28px;
+  }
+
+  .hero-right p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .page {
+    padding: 100px 20px 40px; /* 🔥 lebih kecil & enak */
+  }
+}
