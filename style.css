@@ -64,6 +64,30 @@ nav.shrink {
   margin: 0 auto;
 }
 
+
+@media (max-width: 768px) {
+
+  .navbar {
+    display: flex;
+    justify-content: space-between; /* 🔥 bagi rata */
+    gap: 4px; /* 🔥 kecilin jarak */
+    padding: 0 8px;
+  }
+
+  .navbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .navbar a {
+    font-size: 11px; /* 🔥 kecilin font */
+    padding: 5px 6px; /* 🔥 kecilin padding */
+    flex: 1; /* 🔥 bagi rata semua item */
+    text-align: center;
+  }
+
+}
+
+
 .navbar a {
   text-decoration: none;
   color: white;
@@ -78,15 +102,28 @@ nav.shrink {
   color: #f97316;
 }
 
+
+/* MULAI INI BUAT HP */
+
 .hero {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 60px;
 
-  height: calc(100vh - 75px);
-  margin-top: -55px;
+  min-height: calc(100vh - 65px);
+  margin-top: 0px;
 }
+
+@media (max-width: 768px) {
+  nav {
+    height: 65px;
+  }
+
+}
+
+
+
 
 /* .hero-img {
   width: 250px;
@@ -220,7 +257,7 @@ nav.shrink {
 .page {
   padding: 80px 120px;
   background: #fff7ed;
-  min-height: calc(100vh - 75px);
+  min-height: calc(100vh - 65px);
 }
 
 /* CARDS */
@@ -456,7 +493,6 @@ nav.shrink {
 
 .page {
   transition: opacity 0.4s ease;
-  padding: 120px 120px 80px;
   animation: fadeInPage 0.6s ease;
 }
 
@@ -714,7 +750,6 @@ body.fade-out .page {
   /* gambar lebih ringan */
   .project-img {
     width: 100%;
-    height: auto;
     object-fit: cover;
   }
 
@@ -752,7 +787,8 @@ body.fade-out .page {
   }
 
   nav {
-    margin-top: 45px; /* dorong navbar ke bawah */
+    margin-top: 0;
+    top: 0; /* dorong navbar ke bawah */
   }
 }
 
@@ -923,9 +959,10 @@ body.fade-out .page {
     text-align: center;
     gap: 30px;
 
-    height: auto;        /* 🔥 penting */
-    margin-top: 100px;   /* biar ga ketutup navbar */
+    min-height: auto;
+    margin-top: 65px;   /* biar ga ketutup navbar */
     padding: 20px;
+    padding-top: 90px;
   }
 
   .hero-right {
@@ -949,6 +986,7 @@ body.fade-out .page {
   .hero-right p {
     font-size: 14px;
     line-height: 1.6;
+    padding: 0 10px;
   }
 
   .social-icons {
@@ -959,6 +997,60 @@ body.fade-out .page {
 
 @media (max-width: 768px) {
   .page {
-    padding: 100px 20px 40px; /* 🔥 lebih kecil & enak */
+    padding: 90px 16px 30px;
   }
+}
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+
+  /* 🔥 card lebih compact */
+  .project-card {
+    padding: 18px;
+    margin-bottom: 25px;
+  }
+
+  /* 🔥 container image full */
+  .project-images {
+    width: 100%;
+    height: 180px;
+  }
+
+  /* 🔥 semua image konsisten */
+  .project-img,
+  .img2,
+  .img3 {
+    height: 180px;
+  }
+
+  /* 🔥 fix slide image biar ga kepanjangan */
+  .project-card:hover .img2 {
+    transform: translateX(100%);
+  }
+
+  .project-card:hover .img3 {
+    transform: translateX(200%);
+  }
+
+  /* 🔥 text lebih kecil biar proporsional */
+  .project-card h3 {
+    font-size: 18px;
+  }
+
+  .project-card p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* 🔥 spacing lebih rapih */
+  .project-card p {
+    margin-top: 6px;
+  }
+
 }
