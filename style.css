@@ -1033,7 +1033,24 @@ body.fade-out .page {
   .hero-img {
     width: 160px;
     height: 160px;
+    animation: float 6s ease-in-out infinite, glowMobile 2.5s ease-in-out infinite alternate;
   }
+
+  @keyframes glowMobile {
+  from {
+    box-shadow:
+      0 0 25px rgba(249,115,22,0.7),
+      0 0 50px rgba(249,115,22,0.6),
+      0 0 80px rgba(249,115,22,0.5);
+  }
+  to {
+    box-shadow:
+      0 0 60px rgba(249,115,22,1),
+      0 0 120px rgba(249,115,22,0.9),
+      0 0 180px rgba(249,115,22,0.8),
+      0 0 250px rgba(249,115,22,0.6);
+  }
+}
 
   .hero-right h1 {
     font-size: 24px;
