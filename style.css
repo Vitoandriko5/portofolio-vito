@@ -427,13 +427,18 @@ nav.shrink {
   }
 
   .project-images {
-    width: 120px;
-    height: 90px;
+  display: flex;
+  gap: 6px;
 
-    float: left;        /* 🔥 WAJIB */
-    margin-right: 12px; /* jarak ke text */
-    margin-bottom: 6px;
-  }
+  width: 120px;
+  height: 90px;
+
+  float: left;
+  margin-right: 12px;
+  margin-bottom: 6px;
+
+  overflow: visible; /* 🔥 ini kuncinya */
+}
 
 }
 
@@ -1079,8 +1084,8 @@ body.fade-out .page {
 
   /* 🔥 gambar diperkecil */
   .project-images {
-    width: 120px;     /* 🔥 kecil */
-    height: 90px;
+    width: 110px;     /* 🔥 kecil */
+    height: 85px;
     margin-bottom: 8px;
 
     display: block;
@@ -1119,3 +1124,4 @@ body.fade-out .page {
   }
 
 }
+
